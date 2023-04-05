@@ -1,0 +1,149 @@
+
+/* Resources Page */
+#resource-container
+{
+   height: 500px;
+   width: 100%;
+}
+#campus-saftey
+{
+   width: 40%;
+   float: left;
+}
+
+#campus-saftey h3
+{
+   text-align: center;
+   padding: 0px 0% 10px 10%;
+   margin: 10px 10px;
+}
+
+#campus-saftey a
+{
+   text-align: center;
+   float: left;
+   width: 90%;
+   padding: 10px 10% 10px 10%;
+   margin: 10px 10px;
+   background-color:gainsboro;
+   text-decoration: none; 
+   color: dimgray;
+   border-radius: 5px;
+   
+   
+}
+
+.default
+{
+   color: dimgray;
+   background-color: gainsboro;
+   
+}
+.hover
+{
+   display: none;
+   color: gainsboro;
+   background-color: dimgray;
+   
+}
+
+#campus-security:hover #campus-security-default, #fire-ems:hover #fire-ems-default, #public-saftey:hover #public-saftey-default, #crime-action:hover #crime-action-default, #hotline1:hover #hotline1-default, #hotline2:hover #hotline2-default, #hotline3:hover #hotline3-default, #hotline4:hover #hotline4-default
+{
+  display:none;
+}
+
+
+#campus-security:hover #campus-security-hover, #fire-ems:hover #fire-ems-hover, #public-saftey:hover #public-saftey-hover, #crime-action:hover #crime-action-hover, #hotline1:hover #hotline1-hover, #hotline2:hover #hotline2-hover, #hotline3:hover #hotline3-hover, #hotline4:hover #hotline4-hover
+{
+   display: inline-block;
+   color: gainsboro;
+   background-color: dimgray;
+   
+}
+
+
+#hotlines 
+{
+   float: right;
+   width: 40%;
+}
+
+#hotlines h3 
+{
+   text-align: center;
+   padding: 0px 30% 10px 10%;
+   margin: 10px 10px;
+}
+
+
+
+#hotlines a
+{
+   text-align: center;
+   float: right;
+   width: 100%;
+   padding: 10px 10% 10px 10%;
+   margin: 10px 10px;
+   background-color:gainsboro;
+   text-decoration: none; 
+   color: dimgray;
+   border-radius: 5px;
+   
+}
+
+/* style for phone screens */
+@media only screen and (max-width: 600px) {
+   
+   #resource-container
+{
+   height: 950px;
+   width: 100%;
+}
+  #campus-saftey
+   {
+      justify-content: center;
+      width: 80%;
+   }
+   
+   #campus-saftey a
+   {
+      width: 100%;
+      margin: 10px 30px;
+      padding: 5% 5% 5% 5%;
+   }
+   #campus-saftey h3
+   {
+     text-align: center;
+      margin: 0;
+   }
+
+   #hotlines
+   {
+      justify-content: center;
+      width: 80%;
+   }
+   #hotlines a
+   {
+      width: 100%;
+      margin: 10px 30px;
+   }
+   #hotlines h3
+   {
+      text-align: center;
+   }
+   
+   #hotlines a
+   {
+      padding: 5% 5% 5% 5%;
+   }
+   #additional a
+   {
+      display: inline-block;
+   }
+   
+
+}
+   
+   
+    
+

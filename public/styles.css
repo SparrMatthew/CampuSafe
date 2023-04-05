@@ -1,0 +1,349 @@
+body 
+{
+   color: black;
+   font-family: 'Oxygen', sans-serif;
+   width: 100%;
+}
+
+
+
+header 
+{
+   text-align: center;
+   width: 100%;
+   padding-top: 30px;
+   background-color: #f0f3f4;
+   -webkit-box-shadow: 0 4px 6px -6px #222;
+  -moz-box-shadow: 0 4px 6px -6px #222;
+   box-shadow: 0 4px 6px -6px #222;
+   margin-bottom: 5px;
+}
+
+header h1 a
+{
+   color: dimgray;
+   font-size: 50px;
+   text-decoration: none;
+  
+}
+
+
+#hello-user
+{
+   float: right;
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-top: 5px;
+   color: dimgrey;
+   
+}
+
+#profile-dropdown 
+{
+  margin: 10px 0px 0px 20px;
+  position: absolute;
+  display: inline-block;
+}
+/* Profile Dropdown Content (Hidden by Default) */
+#profile-dropdown-content 
+{
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+#profile-dropdown-content a 
+{
+  color: black;
+  padding: 12px 0px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+#profile-dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+#profile-dropdown:hover #profile-dropdown-content {display: block;}
+
+/* button to add alert */
+#add-alert
+{
+   position: absolute;
+   background-color: #ee2e24;
+   border-radius: 5px;
+   right: 0;
+   margin: 10px 20px 0px 0px;
+   padding: 5px;
+   color:white;
+   text-decoration: none;
+   text-align: center;
+   border: 1px solid white;
+   font-size: 15px;
+}
+#add-alert:hover
+{
+   background-color: white;
+   color:#ee2e24;
+   border: 1px solid #ee2e24;
+}
+
+/* phone navigation styles (dropdown hamburger) */
+
+.menuButton
+{
+   display: none;
+   cursor: pointer;
+   font-size: 30px;
+   float: right;
+   padding: 10px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  
+  top: 0;
+  right: 0;
+  background-color: #f1f1f1;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: dimgray;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: white;
+}
+#web-nav li
+{ 
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+#web-nav ul 
+{ 
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    padding-left: 0;
+    list-style-type: none; 
+}
+#web-nav a
+{ 
+    text-decoration: none;
+    color: dimgray;
+    font-size: 14px;
+    letter-spacing: .5px;
+}
+#web-nav a:link
+{
+   color:dimgray;
+}
+
+#web-nav a:hover
+{ 
+    color: #ee2e24;
+
+}
+#web-nav a:active
+{ 
+    color: #ee2e24;
+
+}
+
+
+#wrapper 
+{
+   margin: auto;
+   width: 80%;
+   height: auto;
+   
+}
+#map2
+{
+   border-radius: 10px;
+   width:50%;
+   height: 90%;
+   float: left;
+}
+/* Interactive Map (Using Google Maps API) */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 100ms;
+  visibility: hidden;
+  opacity: 0;
+  
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 80%;
+  height: 80%;
+  position: relative;
+  transition: all 100ms ease-in-out;
+  
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 100ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  height: 100%;
+  z-index: 1;
+}
+.popup .submit
+{
+   transition: all 100ms;
+   text-decoration: none;
+   border: none;
+   width: 50%;
+   padding: 10px;
+   margin: auto;
+   margin-top: 10%;
+   background-color: gainsboro; 
+   border-radius: 5px;
+}
+
+.popup .submit:hover
+{
+   background-color: dimgray; 
+   color: gainsboro;
+}
+
+#report
+{
+   padding: 20px;
+   width: 40%;
+   height: 90%;
+   margin: auto;
+   float: right;
+   
+}
+#report label
+{
+   padding: 0px;
+   font-size: 20px;
+}
+
+footer 
+{
+   text-align: center;
+   width: 100%;
+   bottom: 0;
+}
+
+/* style for phone screens */
+@media only screen and (max-width: 600px) {
+
+    /* widen wrapper */
+    #wrapper { 
+       width: 95%;
+       height: 100vh;
+   }
+   
+   /* center and widen content on screen */
+    #map2, #report
+   {
+       width: 90%;
+       height: 500px;
+   }
+   
+   
+   #profile-dropdown:hover #profile-dropdown-content {display: none;}
+
+   
+   /* scroll to see overflow content on report popup */
+   .popup .content { overflow-y: scroll; }
+   
+   
+   #alerts
+   {
+      float: left;
+   }
+   #left-side
+   {
+      float: none;
+      width: 100%;
+      margin: auto;
+      height: 400px;
+   }
+   #right-side
+   {
+      display:none;
+   }
+   
+   header
+   {
+      width: 100%;
+      height:100px;
+   }
+   
+   .menuButton
+   {
+      display:block;
+      position: absolute;
+      right: 0;
+      padding: 20px;
+      height: 50px;
+   }
+   
+   header h1 a
+   {
+      padding-top: 10px;
+      font-size: 40px;
+      width: 90%;
+      margin:auto;
+      float: left;
+   }
+    #web-nav
+    {
+        display: none;
+    }
+
+}
+   
+   
+    
+

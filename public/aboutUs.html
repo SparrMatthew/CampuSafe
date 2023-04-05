@@ -1,0 +1,218 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> CampuSafe </title>
+    
+<link rel="icon" href="images/CampuSafe-logo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta charset="utf-8">
+   
+ <!-- Import stylesheet -->
+   <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="aboutUs.css">
+   
+    <!-- import JS files -->
+   <script type="text/javascript" src="map.js"></script>
+   
+   <script type="text/javascript" src="events.js"></script>
+   
+ <!-- Import icons -->
+   <!-- Profile icon -->  
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+   
+   <!-- Settings icon -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+   
+   <!-- Logout icon -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+ <!-- Import fonts -->   
+   
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   
+  <!-- Oxygen font -->
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+
+   
+</head>
+<body>
+   
+   <div id = "topHead">
+    <div id = "profile-dropdown">
+        <a id= "profile-icon" href="#profile-popup" style="color: dimgray"><span class="material-symbols-outlined" >person_filled</span></a>
+        <div id = "hello-user">Hello User!</div>
+        <div id="profile-dropdown-content">
+         <a href="#profile-popup" style="color: dimgray"><span class="material-symbols-outlined" style="margin: 0px 10px">person_filled</span>My Profile</a>
+         <a href="login.html" style="color: dimgray"><span class="material-symbols-outlined" style="margin: 0px 10px">logout</span>Logout</a>
+        </div>
+    
+      </div>
+       <!-- Add Alert Button, users click to open up a popup where they can report an incident -->
+      <a id="add-alert" href="#report-popup">Report Incident</a>
+   </div>
+   <header>
+      
+    <h1><a href = "index.html"><img src="images/CampuSafe-logo.png" height="50" alt = "CampuSafe logo">&nbsp;Campu<class id="redText" style="color:#ee2e24">Safe</class></a></h1>
+   
+      <!-- Menu Nav for mobile browser (slides from right side of screen) -->
+      
+      <span class="menuButton" onclick="openNav()">&#9776;</span>
+      
+      <!-- Menu Nav for web browser (appears across top of screen) -->
+     
+      <nav id = "web-nav">
+        <ul>
+        <li><a href = "index.html"><img style="visibility: hidden" id="nav-logo" src="images/nav-logo.png">Alerts</a></li>
+        <li><img id="nav-logo" style="visibility: hidden" src="images/nav-logo.png"><a href = "myFriends.html">My Friends</a></li>
+        <li><img id="nav-logo" style="visibility: hidden" src="images/nav-logo.png"><a href = "resources.html">Resources</a></li>
+        <li><img id="nav-logo" src="images/nav-logo.png"><a href = "aboutUs.html">About Us</a></li>
+         </ul>
+    </nav>
+   </header>
+   
+   <div id="wrapper">
+   <div id="aboutUsHeropic">
+   <img src="images/college_image.jpeg" width="100%" alt="Image of the College of Charleston">
+   
+   </div>
+   
+   <h2>About Us</h2>
+    <p>
+    Our team at the College of Charleston want to thank you for using CampuSafe!<br>
+    <br>
+    We are a small group of developers currently attending the College of Charleston. This project was developed using cutting-edge technology like BlockChain. We put in copius amounts of effort to get CampuSafe up and running for everyone to use, so we hope you enjoy it! If you have any suggestions, comments, or complaints, please don't hesitate to let us know through the contact information at the bottom of the page.<br>
+    <h3>Get to Know Us:</h3>
+    Our front-end developer (the one who makes this site look as amazing as it does!) is Meghan Gillikin.<br>
+    <!-- feel free to add info about yourself (major, grade, fun fact) -->
+    Meghan is a Senior, double majoring in Computing in the Arts and Studio Art. She works in the AI, Music, and Interaction Lab at the College of Charleston. 
+    <br>
+    Our back-end developers (who put in the work to get all the cool features up and running!) are Matthew Sparr and Trent Varnes. <br>
+    Both are seniors majoring in Computer Science B.S.<br>
+    <!-- feel free to add info about yourself (major, grade, fun fact) -->
+    <br>
+    Our database developers (who make sure everyones information is stored securely!) are Erin Phillips and Olivia Schreiner.<br>
+    <!-- feel free to add info about yourself (major, grade, fun fact) -->
+    Erin is a Senior, majoring in a B.S. in Computer Science, and is also our project manager!<br>
+    Olivia is a Junior, double majoring in Computer Science and Mathematics and is our documentation specialist! This is the first software development project they've made, but they hope to make many more!<br>
+    <br>
+   
+   <!-- Sample HTML Form -->
+<div class="container">  
+  <form id="contact" action="" method="post">
+    <h3>Quick Contact</h3>
+    <h4>Contact us with any feedback or questions.</h4>
+    <fieldset>
+      <input placeholder="Your name" type="text" tabindex="1" required >
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Email Address" type="email" tabindex="2" required>
+    </fieldset>
+    <fieldset>
+      <textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
+  </form>
+ 
+  
+</div>
+      
+       <!-- Report popup - holds a form where users can fill out information about incident and submit it to alert feed -->
+      
+   <div id = "report-popup" class="overlay">
+      <div class="popup">
+      <a class="close" href="#">&times;</a>
+          <div class="content">
+             <div id="map2" class="map-item"> </div>
+             <form id = "report">
+                <label for="location" >Location  *</label>
+                <br>
+                <textarea type="location" required id="location" style="border:none;" autofocus placeholder="Click on the map to add a location"></textarea>
+                <br>
+                <label for="date">Date  *</label>
+                <br>
+                <input type="date" required id="date" name="date">
+                <br>
+                <br>
+                <label for="time">Time  *</label>
+                <br>
+                <input type="time" required id="time" name="time">
+                <br>
+                <br>
+                <div id="latlng" style="display: none"></div>
+                <label for="incident">Incident  *</label>
+                <br>
+                <select id="incident" required name="incident">
+               
+                <option value="" >Select an Option</option>
+                <option value="theft">Theft</option>
+                <option value="shooting">Shooting</option>
+                <option value="harrassment">Harassment</option>
+                <option value="car-breakin">Car Break In</option>
+                <option value="stalking">Stalking</option>
+                <option value="sexual-assault">Sexual Assault</option>
+                <option value="other">Other</option>
+                </select>
+                <br>
+                <br>
+                <label for="crime">Was this a violent crime?  *</label><br>
+                <select id="crime" required name="crime">
+                <option value="" selected>Select an Option</option>
+                <option value="non-violent">Non-Violent</option>
+                <option value="violent">Violent</option>
+                </select>
+                <br>
+                <br>
+                <label for="additional-info">Additional Information</label><br>
+                <textarea wrap="soft" style="resize:none; height:10%;"></textarea>
+                <br>
+                <input type=submit name="submit" class="submit">
+                <br>
+                <br>
+                <div>* Required</div>
+                
+             
+             </form>
+      </div>
+      </div>
+      </div>
+      
+      
+   <div class = "sidenav" id="mySidenav">
+         <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+         <a href = "index.html">Alerts</a>
+         <a href = "myFriends.html">My Friends</a>
+         <a href = "resources.html">Resources</a>
+         <a href = "aboutUs.html">About Us</a>
+         <a href="#profile-popup">My Profile</a>
+         <a href="login.html">Logout</a>
+      </div>
+   
+     <!-- Profile popup box (users can edit profile info and see account info)-->
+   
+   <div id = "profile-popup" class="overlay">
+      <div class="popup">
+      <a class="close" href="#">&times;</a>
+          <div class="content">
+             Profile
+         </div>
+      </div>
+   </div>
+   
+    <footer>
+       <small><i>Copyright &copy; 2022 CampuSafe</i><br>
+       <a href="mailto:gillikinme@g.cofc.edu?subject = Feedback&body = Message">Contact Us</a>
+       </small>
+   </footer>
+   </div>
+   
+   <!-- Connect to Google Maps -->   
+<script async defer
+     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQy4vKcZsMzbEjzqRb44n0AsvnmgMFC30&callback=drawMap">
+</script>
+</body>
+</html>
